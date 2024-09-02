@@ -1,0 +1,12 @@
+header.bg-slate-600.py-2 
+    .container.mx-auto.flex.justify-between.items-center
+        h1.text-4xl.text-white.font-extrabold.text-center Finca 
+            span.font-normal Raiz
+
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden")
+            a(href="/mispropiedades") Mis Propiedades
+            a(href="") Mis Perfil
+
+            form(action="/auth/cerrarsesion" method="POST")
+                input(type="hidden" name="_csrf" value=csrfToken)
+                input(type="submit" class="bg-indigo-800 py-2 px-10 rounded-lg font-bold cursor-pointer" value="Cerrar Sesión")

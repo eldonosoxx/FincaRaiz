@@ -1,0 +1,27 @@
+header.bg-slate-600.py-2
+    .container.mx-auto.flex.justify-between.item-center
+        h1.text-4x1.text-white.font-extrabold.text-center Finca 
+            span.font-normal Raiz 
+        
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white hidden")
+            a(href="/auth/registro") Crear cuenta
+            a(href="/auth/login") Iniciar sesion 
+
+div(class="bg-slate-700 py-5 hidden lg:block")
+    div(class="container mx-auto flex justify-between")
+        nav(class="flex gap-4 items-center")
+            a(href="/categoria/1" class="text-sm font-bold uppercase text-white") Casas
+            a(href="/categoria/2" class="text-sm font-bold uppercase text-white") Departamentos 
+            a(href="/categoria/3" class="text-sm font-bold uppercase text-white") Bodegas 
+            a(href="/categoria/4" class="text-sm font-bold uppercase text-white") Terrenos 
+            a(href="/categoria/5" class="text-sm font-bold uppercase text-white") Cabañas
+
+        form(action="/buscador" method="POST" class="flex gap-3 items-center")
+            input(type="hidden" name="csrf" value= csrfToken)
+            label(for="termino" class="text-sm uppercase font-bold text-white") Busqueda 
+            input(type="text" id="termino" name="termino" placehoder="Buscar Propiedades" class="p-2 rounded-lg shadow text-sm")
+            input(type="submit" class="bg-indigo-400 hover:bg-indigo-400 rounded-lg text-white uppercase font-bold p-2 cursor-pointer text-sm" value="Buscar")
+
+
+
+
